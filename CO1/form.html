@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            h2{color: mediumblue;}
+            form  { display: table;      }
+            p     { display: table-row;  }
+            label { display: table-cell; }
+            input { display: table-cell; }
+        </style>
+    </head>
+    <body style="background-color:skyblue;border: 2px solid;padding: 100px;"align="center";>
+        <h2><center><u>REGISTRATION FORM</u></center></h2><br><br>
+        <form>
+            <p>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" autofocus="required"><br><br>
+            </p>
+            <p>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            </p>
+            <p>
+            <label for="lname">Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+            </p>
+            <p>
+                <label for="sex">Sex</label>
+                Male<input type="radio" id="sex" name="sex"> Female<input type="radio" id="sex" name="sex"><br><br>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+            <input type="email" id="mail" name="mail"><br><br>
+            </p>
+            <p>
+                <label for="number">Mobile Number:</label>
+            <input type="tel" id="num" name="num"><br><br>
+            </p>
+            <p>
+                <label for="addr">Address:</label>
+                <textarea></textarea><br><br>
+            </p>
+            <p>
+                <label for="number">Nationality:</label>
+                <select id="nat" name="nat">
+                <option selected=""value="default">Select a Country</option>
+                <option value="india">India</option>
+                <option value="Usa">USA</option>
+                <option value="can">Canada</option>
+                <option value="uk">UK</option>
+            </select><br><br>
+            </p>
+            <p>
+                <label for="lang">Languages Known:</label>
+                <input type="checkbox" name="l1" id="l1" value="English">English<br>
+                <input type="checkbox" name="l2" id="l2" value="Hindi">Hindi<br>
+                <input type="checkbox" name="l3" id="l3" value="Malayalam">Malayalam<br><br><br>
+		<button>Submit</button>
+            </p>
+	
+	
+		
+	
+
+        </form>
+    </body>
+</html>
