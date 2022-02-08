@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Calendar</title>
+        <script>
+            function cal()
+            {
+                const months= [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ];
+                let year=Number(document.getElementById("yr").value);
+                for(var mon=0;mon<12;++mon)
+                {
+                    let d=new Date(year,mon);
+                    console.log(d);
+                    let table=
+                    "<h3>" + 
+                    months[mon] +
+                    "<h3>" +
+                    "<table><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>"
+
+                    for(let i=0;i<d.getDay();i++)
+                    {
+                        table+="<td></td>";
+                    }
+
+                    while(d.getMonth()==mon)
+                    {
+                        table+="<td>" + d.getDate() + "</td>" ;
+                        
+                        if(d.getDay()==6)
+                        {
+                            table+= "</tr><tr>" ;
+                        }
+
+                        d.setDate(d.getDate() + 1) ;
+                    }
+
+                    if(d.getDay()!=0)
+                    {
+                        for(let i=d.getDay();i<=6;i++)
+                        {
+                            table+="<td></td>";
+                        }
+                    }
+
+                    table += "</tr></table>";
+
+                    document.getElementById(mon).innerHTML=table;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <table align="center">
+            <tr>
+                <td><div id="0"></div></td>
+                <td><div id="1"></div></td>
+                <td><div id="2"></div></td>
+                <td><div id="3"></div></td>
+            </tr>
+            <tr>
+                <td><div id="4"></div></td>
+                <td><div id="5"></div></td>
+                <td><div id="6"></div></td>
+                <td><div id="7"></div></td>
+            </tr>
+            <tr>
+                <td><div id="8"></div></td>
+                <td><div id="9"></div></td>
+                <td><div id="10"></div></td>
+                <td><div id="11"></div></td>
+            </tr>
+            <tr>
+                <td><div id="12"></div></td>
+                <td><div id="13"></div></td>
+                <td><div id="14"></div></td>
+                <td><div id="15"></div></td>
+            </tr>
+        </table>
+        Enter the year : <input type="text" id="yr"><br>
+        <input type="button" value="Submit" onclick="cal()">
+    </body>
+</html>

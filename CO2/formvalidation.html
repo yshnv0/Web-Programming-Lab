@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            h2{color: mediumblue;}
+            form  { display: table;      }
+            p     { display: table-row;  }
+            label { display: table-cell; }
+            input { display: table-cell; }
+        </style>
+        <script>
+            function valid()
+            {
+                var fname=document.myform.fname1.value;
+                var lname=document.myform.lname1.value;
+                var dob=document.myform.dob1.value;
+                var sex=document.myform.sex1.value;
+                var email=document.myform.mail1.value;
+                var mob=document.myform.num1.value;
+                var adr=document.myform.addr1.value;
+                var nat=document.myform.nat1.value;
+                var pas=document.myform.pass1.value;
+                var ren = /[0-9!@#$%^&*]/
+                
+                if (fname == "") 
+                {
+                    alert("Enter Your First Name.");
+                    document.myform.fname1.focus();
+                    return false;
+                }
+                else if(ren.test(fname))
+                {
+                    alert("Enter a Valid First Name.");
+                    document.myform.fname1.focus();
+                    return false;
+                }
+
+                if (lname == "") 
+                {
+                    alert("Enter Your Last Name.");
+                    document.myform.lname1.focus();
+                    return false;
+                }
+                else if(ren.test(lname))
+                {
+                    alert("Enter a Valid Last Name.");
+                    document.myform.lname1.focus();
+                    return false;
+                }
+
+                if (dob == "") 
+                {
+                    alert("Enter Date of Birth.");
+                    document.myform.dob1.focus();
+                    return false;
+                }
+
+                if (sex == "") 
+                {
+                    alert("Enter Your Sex.");
+                    document.myform.sex1.focus();
+                    return false;
+                }
+
+                if (email == "") 
+                {
+                    alert("Enter Your Email.");
+                    document.myform.mail1.focus();
+                    return false;
+                }
+
+                if (mob == "") 
+                {
+                    alert("Enter Your Number.");
+                    document.myform.num1.focus();
+                    return false;
+                }
+                else if (isNaN(mob)) 
+                {
+                    alert("Enter valid Mobile number");
+                    return false;
+                }
+                else if (mob.length != 10) 
+                {
+                    alert("Mobile number should contain 10 digits.");
+                    return false;
+                }
+
+                if (adr == "") 
+                {
+                    alert("Enter Your Address.");
+                    document.myform.addr1.focus();
+                    return false;
+                }
+
+                if (pas == "" || pas.length<8) 
+                {
+                    alert("Enter a Password with minimum 8 characters.");
+                    document.myform.pass1.focus();
+                    return false;
+                }
+
+                
+
+                
+
+                
+                
+
+            }
+        </script>
+    </head>
+    <body style="background-color:skyblue;border: 2px solid;padding: 100px;"align="center";>
+        <h2><center><u>REGISTRATION FORM</u></center></h2><br><br>
+        <form name="myform" onsubmit="return valid()" method="POST">
+            <p>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname1" name="fname" autofocus="required"><br><br>
+            </p>
+            <p>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname1" name="lname"><br><br>
+            </p>
+            <p>
+            <label for="lname">Date of Birth:</label>
+            <input type="date" id="dob1" name="dob"><br><br>
+            </p>
+            <p>
+                <label for="sex">Sex</label>
+                Male<input type="radio" id="sex1" name="sex"> Female<input type="radio" id="sex1" name="sex1"><br><br>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+            <input type="email" id="mail1" name="mail"><br><br>
+            </p>
+            <p>
+                <label for="number">Mobile Number:</label>
+            <input type="tel" id="num1" name="num"><br><br>
+            </p>
+            <p>
+                <label for="addr">Address:</label>
+                <textarea id="addr1"></textarea><br><br>
+            </p>
+            <p>
+                <label for="number">Nationality:</label>
+                <select id="nat1" name="nat">
+                <option selected=""value="default">Select a Country</option>
+                <option value="india">India</option>
+                <option value="Usa">USA</option>
+                <option value="can">Canada</option>
+                <option value="uk">UK</option>
+            </select><br><br>
+            </p>
+            <p>
+                <label for="lang">Languages Known:</label>
+                <input type="checkbox" name="l1" id="l1" value="English">English<br>
+                <input type="checkbox" name="l2" id="l2" value="Hindi">Hindi<br>
+                <input type="checkbox" name="l3" id="l3" value="Malayalam">Malayalam<br><br><br>
+            </p>
+            <p>
+                <label for="pas">Password:</label>
+                <input type="password" id="pass1"><br><br>
+                <button type="submit">Submit</button>
+            </p>
+	
+	
+		
+	
+
+        </form>
+    </body>
+</html>

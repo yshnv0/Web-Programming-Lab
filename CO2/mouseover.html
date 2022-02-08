@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Mouse Over</title>
+    </head>
+    <body>
+        <center><img src="solar-flare.en.jpg" height="260" width="300" onmouseover="moon(this)" onmouseout="sun(this)"></center><br>
+        <center><p onmouseover="m(this)" onmouseout="s(this)">SUN</p></center>
+        <!-- <center><p><h2>MOON</h2></p></center> -->
+        <script>
+            function moon(x)
+            {
+                x.src="Moon_image.webp"
+            }
+            function sun(y)
+            {
+                y.src="solar-flare.en.jpg"
+            }
+            function m(a)
+            {
+                a.innerHTML="MOON"
+            }
+            function s(b)
+            {
+                b.innerHTML="SUN"
+            }
+        </script>
+    </body>
+</html>

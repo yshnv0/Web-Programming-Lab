@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Online Quiz</title>
+    </head>
+    <body>
+        <form>
+            <h2><center><u>ONLINE QUIZ</u></center></h2>
+            <div><i><b>Max marks=4<br>
+            Time-5mins</i></b></div><br><br>
+            <div>
+                    1.What is the full form of HTML?<br><br>
+                    <input type="radio" id="h1" name="q1">Hyper Test Markup Language<br><br>
+                    <input type="radio" id="h2" name="q1">Hyper Text Makeup Language<br><br>
+                    <input type="radio" id="h3" name="q1">Hyper Text Markup Language<br><br>
+                    <input type="radio" id="h4" name="q1">Hyper Test Mark Language<br><br>
+            </div><hr><br>
+
+            <div>
+                    2.What is the full form of CSS?<br><br>
+                    <input type="radio" id="c1" name="q2">Cascading Style Sheet<br><br>
+                    <input type="radio" id="c2" name="q2">Cascade Style Sheet<br><br>
+                    <input type="radio" id="c3" name="q2">Cascading Styles Sheet<br><br>
+                    <input type="radio" id="c4" name="q2">Cascading Strong Sheet<br><br>
+            </div><hr><br>
+
+            <div>
+                    3.What is the extension of an html file?<br><br>
+                    <input type="radio" id="e1" name="q3">.c<br><br>
+                    <input type="radio" id="e2" name="q3">.css<br><br>
+                    <input type="radio" id="e3" name="q3">.js<br><br>
+                    <input type="radio" id="e4" name="q3">.html<br><br>
+            </div><hr><br>
+
+            <div>
+                    4.What is the extension of a css file?<br><br>
+                    <input type="radio" id="s1" name="q4">.c<br><br>
+                    <input type="radio" id="s2" name="q4">.css<br><br>
+                    <input type="radio" id="s3" name="q4">.js<br><br>
+                    <input type="radio" id="s4" name="q4">.html<br><br>
+            </div><hr><br>
+
+            <center><input type="submit" id="btn"></center><br><br>
+            <!-- <center>Total Marks : <input type="text" id="res"></center>  -->
+
+
+        </form>
+
+        <script>
+            btn.onclick=function()
+            {
+                var score=0;
+                if(document.getElementById("h3").checked)
+                {
+                    score++;
+                   
+                }
+                if(document.getElementById("c1").checked)
+                {
+                    score++;
+                    
+                }
+                if(document.getElementById("e4").checked)
+                {
+                    score++;
+                    
+                }
+                if(document.getElementById("s2").checked)
+                {
+                    score++;
+                    
+                }
+
+                document.write("Total Marks = "+score);
+                
+            }
+        </script>
+    </body>
+</html>

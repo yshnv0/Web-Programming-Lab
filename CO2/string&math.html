@@ -1,0 +1,350 @@
+<html>
+    <head>
+        <title>String Functions</title>
+        <script>
+            function f1()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op1").value;
+                b=document.getElementById("r1").value=s.indexOf(a);
+            }
+            function f2()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op2").value;
+                b=document.getElementById("op3").value;
+                c=document.getElementById("r2").value=s.replace(a,b);
+            }
+            function f3()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op4").value;
+                b=document.getElementById("r3").value=s.concat(a);
+            }
+            function f4()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op5").value;
+                b=document.getElementById("r4").value=s.charAt(a);
+            }
+            function f5()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op6").value;
+                b=document.getElementById("op7").value;
+                c=document.getElementById("r5").value=s.slice(a,b);
+            }
+            function f6()
+            {
+                s=document.getElementById("str").value;
+                a=document.getElementById("op8").value;
+                b=document.getElementById("op9").value;
+                c=document.getElementById("r6").value=s.substr(a,b);
+            }
+            function f7()
+            {
+                a=document.getElementById("op10").value;
+                b=document.getElementById("r7").value=a.toUpperCase();
+            }
+            function f8()
+            {
+                a=document.getElementById("op11").value;
+                b=document.getElementById("r8").value=a.toLowerCase();
+            }
+            function f9()
+            {
+                a=document.getElementById("op12").value;
+                b=document.getElementById("r9").value=Math.abs(a);
+            }
+            function f10()
+            {
+                a=document.getElementById("op13").value;
+                b=document.getElementById("r10").value=Math.ceil(a);
+            }
+            function f11()
+            {
+                a=document.getElementById("op14").value;
+                b=document.getElementById("r11").value=Math.floor(a);
+            }
+            function f12()
+            {
+                a=document.getElementById("op15").value;
+                b=document.getElementById("r12").value=Math.exp(a);
+            }
+            function f13()
+            {
+                a=document.getElementById("op16").value;
+                b=document.getElementById("r13").value=Math.log(a);
+            }
+            function f14()
+            {
+                a=document.getElementById("op17").value;
+                b=document.getElementById("op18").value;
+                c=document.getElementById("r14").value=Math.pow(a,b);
+            }
+            function f15()
+            {
+                a=document.getElementById("op19").value;
+                b=document.getElementById("op20").value;
+                c=document.getElementById("r15").value=((Math.random() * b) + a);
+            }
+            function f16()
+            {
+                a=document.getElementById("op21").value;
+                b=document.getElementById("r16").value=Math.round(a);
+            }
+            function f17()
+            {
+                a=document.getElementById("op22").value;
+                b=document.getElementById("r17").value=Math.sqrt(a);
+            }
+
+        </script>
+    </head>
+    <body>
+        <hr><h2><u><center>STRING FUNCTIONS</center></u></h2><hr>
+        <table width="900" border="0" align="center" cellpadding="20">
+            <tr>
+                <td width="50%" align="right">Enter String : </td>
+                <td><input type="text" id="str" autofocus="required" ></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h3><center>Operations</center></h3><hr></td>
+            </tr>
+            <tr>
+                <td colspan="2">indexOf() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter character to be searched : </td>
+                <td><input type="text" id="op1" onchange="f1()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Character found at position : </td>
+                <td><input type="text" id="r1"></td>
+            </tr>
+            <tr>
+                <td colspan="2">replace() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter word to be replaced : </td>
+                <td><input type="text" id="op2" onchange="f2()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter new word : </td>
+                <td><input type="text" id="op3" onchange="f2()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Resultant string : </td>
+                <td><input type="text" id="r2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">concat() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter new string : </td>
+                <td><input type="text" id="op4" onchange="f3()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Resultant string : </td>
+                <td><input type="text" id="r3"></td>
+            </tr>
+            <tr>
+                <td colspan="2">charAt() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter position : </td>
+                <td><input type="text" id="op5" onchange="f4()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Character at given position : </td>
+                <td><input type="text" id="r4"></td>
+            </tr>
+            <tr>
+                <td colspan="2">slice() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter starting position : </td>
+                <td><input type="text" id="op6"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter ending position : </td>
+                <td><input type="text" id="op7" onchange="f5()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Sliced string : </td>
+                <td><input type="text" id="r5"></td>
+            </tr>
+            <tr>
+                <td colspan="2">substring() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter starting position : </td>
+                <td><input type="text" id="op8"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter ending position : </td>
+                <td><input type="text" id="op9" onchange="f6()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Substring : </td>
+                <td><input type="text" id="r6"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">toUpperCase() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a string : </td>
+                <td><input type="text" id="op10"  onchange="f7()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">String in upper case : </td>
+                <td><input type="text" id="r7"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">toLowerCase() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a string : </td>
+                <td><input type="text" id="op11"  onchange="f8()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">String in lower case : </td>
+                <td><input type="text" id="r8"></td>
+            </tr>
+            
+
+
+
+        </table><br><hr>
+        <h2><u><center>MATH FUNCTIONS</center></u></h2><hr>
+        <table  width="900" border="0" align="center" cellpadding="20">
+
+            <tr>
+                <td colspan="2"><h3><center>Operations</center></h3><hr></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">abs() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op12"  onchange="f9()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r9"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">ceil() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op13"  onchange="f10()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r10"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">floor() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op14"  onchange="f11()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r11"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">exp() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op15"  onchange="f12()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r12"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">log() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op16"  onchange="f13()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r13"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">pow() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op17"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter degree : </td>
+                <td><input type="number" id="op18"   onchange="f14()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r14"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">random() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter lower limit : </td>
+                <td><input type="number" id="op19"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter upper limit : </td>
+                <td><input type="number" id="op20"   onchange="f15()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r15"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">round() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op21"  onchange="f16()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r16"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">sqrt() function<hr></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Enter a number : </td>
+                <td><input type="number" id="op22"  onchange="f17()"></td>
+            </tr>
+            <tr>
+                <td width="50%" align="right">Result : </td>
+                <td><input type="text" id="r17"></td>
+            </tr>
+
+
+
+        </table><br><hr>
+
+    
+    </body>
+</html>
